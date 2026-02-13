@@ -1,0 +1,132 @@
+:root{
+  --bg: #f6f1ea;
+  --card: #fffaf4;
+  --text: #3b2f2a;
+  --muted: #6b5b53;
+  --header: #6b4f3a;
+  --heading: #4b2f24;
+  --border: #eadfd4;
+  --shadow: 0 10px 24px rgba(43, 32, 26, 0.10);
+  --accent: #a06a43;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+header {
+  background-color: var(--header);
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.profile_png {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.55);
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  padding: 30px;
+  background: var(--card);
+  margin-bottom: 25px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+h2 {
+  color: var(--heading);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.edu-item h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.15rem;
+  color: #2b1f1a;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 15px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 50px;
+  color: #8a7a70;
+  font-size: 0.9rem;
+}
+
+/* GitHub link in header/footer */
+.social-links a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #333; /* GitHub dark color */
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.social-links a i {
+  margin-right: 8px;
+}
+
+.social-links a:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  header { padding: 40px 15px; }
+}
